@@ -59,7 +59,15 @@ public class Item implements java.io.Serializable {
         return String.format(Locale.getDefault(), "%tF  %<tR", new Date(datetime));
     }
 
+    // 裝置區域的日期
+    public String getLocaleDate() {
+        return String.format(Locale.getDefault(), "%tF", new Date(datetime));
+    }
 
+    // 裝置區域的時間
+    public String getLocaleTime() {
+        return String.format(Locale.getDefault(), "%tR", new Date(datetime));
+    }
 
     public void setDatetime(long datetime) {
         this.datetime = datetime;
